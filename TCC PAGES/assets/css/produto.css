@@ -1,0 +1,85 @@
+body {
+    /* corpo todo */
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(214, 228, 255);
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.listra {
+    background-color: blue;
+    width: 100vw;
+    height: 2vh;
+}
+
+.icones {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(255, 255, 255);
+    width: 100vw;
+    height: 15vh;
+}
+
+.tbl {
+    width: 90vw;
+    background-color: rgb(210, 210, 210);
+    border: solid 2px black;
+    height: 70vh;
+    margin-top: 5vh;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+th {
+    font-family: Arial, Helvetica, sans-serif;
+    border-left: solid 2px rgb(0, 0, 0);
+    text-align: center;
+    border-top: solid 2px rgb(0, 0, 0);
+    width: 15vw;
+}
+
+img {
+
+    width: 80px;
+    height: 80px;
+}
+
+.fim {
+    border-right: solid 2px black;
+}
+
+.voltar {
+    margin-left: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.cadastro {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    margin-top: 10px;
+
+}
+
+.funcao {
+    width: 30px;
+    height: 30px;
+
+}
+
+.fun {
+    width: 60px;
+}
+
+.desc {
+    width: 70vh;
+
+}
+
+.codigo_barras {
+    margin-top: 10px;
+    margin-left: 10px;
+}

@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=Russo+One&family=Silkscreen:wght@400;700&display=swap');
+ 
+ 
+body{ /* corpo todo */
+    display: flex;
+    flex-direction: column;
+    background-color:rgb(214, 228, 255);
+    align-items: baseline;
+ 
+    margin: 0;
+    }
+    h1{
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+ 
+        margin-left: 1vw;
+    }
+label{
+ 
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+margin-top: 0.5vh;
+    margin-left: 1vw;
+ 
+}
+    h2{
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+ 
+    margin-left: 1vw;
+ 
+    }
+    .titulo{
+        display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30vh;
+    }
+    .input{
+height: 4vh;
+ 
+ 
+    }
+    .des{
+        margin-left: 1vw;
+        width: 65vw;
+    }
+    .cdb{
+        margin-left: 3vw;
+        width: 27vw;
+    }
+ 
+    .mdd{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 20vh;
+margin-top: 7vh;
+ 
+    }
+    .kg{
+        margin-left: 0.7vw;
+    }
+.valor{
+margin-top: 7vh;
+margin-left: 1vw;
+ 
+    }
+    .vlr{
+        width: 27vw;
+    }
+    .maxmin{
+        display: flex;
+        flex-direction: row;
+        margin-top: 7vh;
+margin-left: 1vw;
+    }
+    .max{
+margin-left: 3vw;
+ 
+    }
+    .min{
+        width: 27vw;
+    }
+    .btns{
+        margin-left: 70vw;
+    }
+    .btn{
+        background-color: rgb(0, 0, 77);
+        color: aliceblue;
+        width: 10vw;
+        margin-left: 3vw;
+        cursor: pointer;
+    }
+    .btn:hover{
+        background-color: rgb(0, 0, 40);
+    }
+    .radio{
+        cursor: pointer;
+    }

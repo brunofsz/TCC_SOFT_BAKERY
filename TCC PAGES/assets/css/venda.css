@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=Russo+One&family=Silkscreen:wght@400;700&display=swap');
+ 
+body {
+    /* corpo todo */
+    display: flex;
+    background-color: rgb(214, 228, 255);
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+ 
+.td {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 80vw;
+    height: 80vh;
+    background-color: rgb(0, 0, 77);
+    border-radius: 50px;
+    margin-top: 10vh;
+ 
+}
+ 
+.input {
+    display: flex;
+    align-items: center;
+    width: 30vw;
+    height: 5vh;
+    background-color: white;
+    border-radius: 10px;
+    border: 0;
+    margin-bottom: 3vh;
+ 
+}
+ 
+th {
+    font-family: Arial, Helvetica, sans-serif;
+    border-left: solid 2px rgb(0, 0, 0);
+    text-align: center;
+    border-top: solid 2px rgb(0, 0, 0);
+    width: 8vw;
+}
+ 
+.tbl {
+    width: 40vw;
+    background-color: rgb(210, 210, 210);
+    border: solid 2px black;
+    height: 35vh;
+    margin: top 0;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+ 
+.fim {
+    border-right: solid 2px black;
+}
+ 
+select {
+    background-color: rgb(214, 228, 255);
+    border-radius: 10px;
+    width: 15vw;
+    height: 2vw;
+}
+ 
+.inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 45vh;
+    width: 30vw;
+}
+ 
+.btn {
+    width: 15vw;
+    height: 5vh;
+    background-color: rgb(214, 228, 255);
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 0;
+    color: black;
+ 
+}
+.btn:hover{
+    background-color: rgba(214, 228, 255, 0.336);
+ 
+ 
+ 
+}
+ 
+h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+ 
+    margin-left: 1vw;
+}
+ 
+.finalizar {
+    margin-top: 20%;
+}
+
+.frm {
+    color: white;
+}

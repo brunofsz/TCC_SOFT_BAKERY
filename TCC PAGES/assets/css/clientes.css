@@ -1,0 +1,58 @@
+body{ /* corpo todo */
+    display: flex;
+    flex-direction: column;
+    background-color:rgb(214, 228, 255);
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    }
+    .listra{
+        background-color: blue;
+        width: 100vw;
+        height: 20px;
+         }
+        
+        .icones{
+            display: flex;
+        flex-direction: row;
+        background-color: rgb(255, 255, 255);
+        width: 100vw;
+        height: 120px;
+        }
+        
+ .tbl{ 
+width: 90vw;
+background-color: rgb(210, 210, 210);
+border: solid 2px black;
+height: 500px ;
+margin-top: 20px;
+overflow: hidden;
+overflow-y: scroll;
+}
+th{
+    font-family: Arial, Helvetica, sans-serif;
+border-left: solid 2px rgb(0, 0, 0);
+text-align: center;
+border-top: solid 2px rgb(0, 0, 0);
+width: 300px;
+}
+img{
+
+    width: 60px;
+    height: 60px;
+}
+.fim{
+    border-right: solid 2px black;
+}
+.voltar{
+margin-left: 10px;
+margin-top: 10px;
+cursor: pointer;
+}
+.cadastro{
+    cursor: pointer;
+    position: absolute;
+right: 10px;
+margin-top:10px;
+
+}
