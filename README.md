@@ -30,4 +30,4 @@ Este projeto não pode ser executado diretamente pelo GitHub Pages por utilizar 
 
 ## 📸 Preview
 
-![Preview](TCC_SOFT_BAKERY/TCC PAGES/assets//Preview.gif)
+![Preview](TCC_SOFT_BAKERY/TCC_PAGES/assets/img/Preview.gif)
