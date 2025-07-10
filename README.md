@@ -1,4 +1,4 @@
-# TCC - Soft Bakery
+# TCC 2023 - Soft Bakery
 
 Este é um projeto simples de um **Sistema de Gestão para Padaria** desenvolvido com **HTML, CSS, JavaScript e PHP**, utilizando um **banco de dados MySQL**. O objetivo é permitir o controle e gerenciamento de pedidos, produtos e estoque de forma prática e intuitiva para pequenas padarias.
 
@@ -7,7 +7,7 @@ Este é um projeto simples de um **Sistema de Gestão para Padaria** desenvolvid
 - Cadastro e listagem de produtos
 - Controle de estoque e movimentação
 - Registro de pedidos e visualização de histórico
-- Sistema de login e autenticação
+- Sistema Caixa e venda
 - Integração com banco de dados MySQL
 
 ## 🧠 Tecnologias utilizadas
@@ -30,4 +30,4 @@ Este projeto não pode ser executado diretamente pelo GitHub Pages por utilizar 
 
 ## 📸 Preview
 
-![Preview](TCC_SOFT_BAKERY/TCC PAGES/assets//Preview.mp4)
+![Preview](TCC_SOFT_BAKERY/TCC PAGES/assets//Preview.gif)
