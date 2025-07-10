@@ -98,14 +98,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $forma_pagamento != 0) {
   <div class="td">
     <div class="inputs" id="inputs">
       <form method="POST">
-        <label for="select"><h4 class="frm">Forma de Pagamento:</h4></label>
-        <select name="select" id="select" required>
-          <!-- Verifica o valor de forma_pagamento para manter a opção selecionada -->
-          <option value="0" <?php echo ($forma_pagamento == 0) ? 'selected' : ''; ?>>Selecione</option>
-          <option value="Cartão" <?php echo ($forma_pagamento == "Cartão") ? 'selected' : ''; ?>>Cartão</option>
-          <option value="Dinheiro" <?php echo ($forma_pagamento == "Dinheiro") ? 'selected' : ''; ?>>Dinheiro</option>
-        </select>
-
+        <div class="alinha-slct">
+          <label for="select">
+            <h4 class="frm">Forma de Pagamento:</h4>
+          </label>
+          <select name="select" id="select" required>
+            <!-- Verifica o valor de forma_pagamento para manter a opção selecionada -->
+            <option value="0" <?php echo ($forma_pagamento == 0) ? 'selected' : ''; ?>>Selecione</option>
+            <option value="Cartão" <?php echo ($forma_pagamento == "Cartão") ? 'selected' : ''; ?>>Cartão</option>
+            <option value="Dinheiro" <?php echo ($forma_pagamento == "Dinheiro") ? 'selected' : ''; ?>>Dinheiro</option>
+          </select>
+        </div>
         <div class="input">
           <h4>Forma de Pagamento:
             <span
@@ -119,17 +122,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $forma_pagamento != 0) {
         </div>
 
         <!-- Exibe o campo de valor pago somente para Dinheiro -->
-        <div id="dinheiroInputs" style="display: <?php echo ($forma_pagamento == "Dinheiro") ? 'block' : 'none'; ?>;">
-          <input type="text" class="input" id="valorPago" placeholder="Valor Pago" oninput="calcularTroco()">
+        <div id="dinheiroInputs" class="dinheiro-inputs" style="display: <?php echo ($forma_pagamento == "Dinheiro") ? 'flex' : 'none'; ?>;">
+          <input type="text" class="input valor-pago" id="valorPago" placeholder="Valor Pago" oninput="calcularTroco()">
+          <br>
           <div id="troco" class="input">
             <h4>Troco:</h4>
             <span id="trocoValor">R$ 0,00</span>
           </div>
         </div>
 
-        <button class="btn finalizar" type="submit" id="finalizarBtn" disabled>Finalizar</button>
-        <!-- Botão de cancelar -->
-        <button class="btn cancelar" type="button" onclick="window.location.href='caixa.php'">Cancelar</button>
+        <div class="alinha-btns">
+          <button class="btn finalizar" type="submit" id="finalizarBtn" disabled>Finalizar</button>
+          <!-- Botão de cancelar -->
+          <button class="btn cancelar" type="button" onclick="window.location.href='caixa.php'">Cancelar</button>
+
+        </div>
+
       </form>
 
     </div>
@@ -137,7 +145,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $forma_pagamento != 0) {
     <!-- Tabela de produtos -->
     <div class="tbl">
       <table>
-        <tr>
+        <tr class="head">
           <th>Num prod</th>
           <th>Cod de Barras</th>
           <th>Descrição</th>
@@ -170,7 +178,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $forma_pagamento != 0) {
 
   <script>
     // Atualiza a forma de pagamento ao selecionar
-    document.getElementById("select").addEventListener("change", function () {
+    document.getElementById("select").addEventListener("change", function() {
       const select = this.value;
       const nomeFormaPagamento = {
         "Cartão": "Cartão",

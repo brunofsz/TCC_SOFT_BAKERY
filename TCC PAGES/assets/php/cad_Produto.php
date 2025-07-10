@@ -76,9 +76,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <form action="cad_Produto.php" method="POST">
         <div class="titulo">
             <h1>Cadastro De Produtos</h1>
-            <h2>Dados Gerais Do Produto</h2>
         </div>
 
+
+        <h2>Dados Gerais Do Produto</h2>
         <div class="dados">
             <input type="text" name="descricao" placeholder="Descrição" class="input des" required>
             <input type="text" name="codigo_barras" placeholder="Código De Barras" class="input cdb" required>
@@ -102,10 +103,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <div class="btns">
             <!-- Botão Cancelar redireciona para produto.php -->
-            <input type="button" value="Cancelar" class="input btn" onclick="window.location.href='produto.php';">
+            <input type="button" value="Cancelar" class="input btn cancelar" onclick="window.location.href='produto.php';">
             <input type="submit" value="Finalizar" class="input btn">
         </div>
     </form>
+    <div class="logo">
+        <h1 id="soft">SOFT</h1>
+        <h1>BAKERY</h1>
+    </div>
 </body>
 
 </html>

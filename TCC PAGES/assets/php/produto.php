@@ -53,29 +53,32 @@ $result = $conn->query($sql);
 
 <body>
   <div class="icones">
-    <a href="./home.php">
-      <img src="../img/voltar.png" alt="Voltar" class="voltar img">
-    </a>
-    <a href="./cad_codigo_barras.php">
-      <img src="../img/codigo-de-barras.png" alt="Codigo de Barras" class="codigo_barras img"> <!-- sobre estoque minimo e maximo -->
-    </a>
+    <div class="home-cad">
+      <a href="./home.php">
+        <img src="../img/voltar.png" alt="Voltar" class="voltar img">
+      </a>
+      <a href="./cad_codigo_barras.php">
+        <img src="../img/codigo-de-barras.png" alt="Codigo de Barras" class="codigo_barras img"> <!-- sobre estoque minimo e maximo -->
+      </a>
+    </div>
     <a href="cad_Produto.php">
       <img src="../img/cad_prod.png" alt="Cadastrar" class="cadastro img">
     </a>
   </div>
   <div class="listra"></div>
 
+
   <div class="tbl">
     <table>
-      <tr>
+      <tr class="head">
         <th>Código Interno</th>
         <th>Código De Barras</th>
-        <th class="desc">Descrição</th>
+        <th>Descrição</th>
         <th>Valor</th>
         <th>Unidade de Medida</th>
         <th>Status</th>
-        <th class="fun"><img src="../img/edit.png" alt="editar" class="funcao"></th>
-        <th class="fim fun"><img src="../img/apagar.png" alt="apagar" class="funcao"></th>
+        <th><img src="../img/edit.png" alt="editar" class="funcao"></th>
+        <th><img src="../img/apagar.png" alt="apagar" class="funcao"></th>
       </tr>
 
       <?php

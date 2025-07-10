@@ -108,7 +108,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       if (isset($_POST['cancelar_venda'])) {
         $_SESSION['produtos'] = [];
       }
-
     } catch (PDOException $e) {
       $descricao = 'Erro ao conectar ao banco de dados: ' . $e->getMessage();
       $valor = 0;
@@ -187,11 +186,6 @@ $temProdutos = !empty($_SESSION['produtos']);
 
 <body>
   <!-- Botões e Formulários -->
-  <div class="voltar">
-    <a href="./home.php">
-      <img src="../img/voltar.png" alt="Voltar">
-    </a>
-  </div>
 
   <!-- Exibir mensagem de erro, se houver -->
   <?php if ($tipoMensagem === 'erro'): ?>
@@ -202,74 +196,148 @@ $temProdutos = !empty($_SESSION['produtos']);
 
 
 
-  <div class="servicos">
-    <!-- Botão para cancelar toda a venda -->
-    <form method="POST" action="cancelar_venda.php" style="display: flex;">
-      <input type="submit" name="cancelar_venda" value="Cancelar Venda" />
-    </form>
 
-    <form method="POST" action="venda.php" style="display: flex;">
-      <!-- Desabilita o botão se não houver produtos -->
-      <input type="submit" name="venda" value="Finalizar Venda" <?php echo $temProdutos ? '' : 'disabled'; ?> />
-    </form>
-
-    <form method="POST" action="crediario.php" style="display: flex;">
-      <!-- Desabilita o botão se não houver produtos -->
-      <input type="submit" name="crediario" value="Venda no Crediário" <?php echo $temProdutos ? '' : 'disabled'; ?> />
-    </form>
-
-    <!-- Botão para abrir o modal -->
-    <button id="openModalBtn" class="inpt">Exibir Produtos Cadastrados</button>
-  </div>
 
   <div class="top">
-    <div class="loja">
-      <h4 class="etqt">Loja:</h4>
-      <div class="nomelj">
-        <h4 class="txtinput">001</h4>
-      </div>
+
+    <div class="voltar">
+      <a href="./home.php">
+        <img src="../img/voltar.png" alt="Voltar">
+      </a>
     </div>
 
-    <div class="operador">
-      <h4 class="etqt">Operador:</h4>
-      <div class="nomeop">
-        <h4 class="txtinput">Balconista</h4>
+
+    <div class="inputs-alinha">
+      <div class="loja">
+        <h4 class="">Loja:</h4>
+        <div class="nomelj">
+          <h4 class="txtinput">001</h4>
+        </div>
       </div>
+
+      <div class="loja">
+        <h4>Operador:</h4>
+        <div class="nomelj">
+          <h4 class="txtinput">Balconista</h4>
+        </div>
+      </div>
+
     </div>
+
+    <!-- BTNS -->
+
+    <div class="servicos">
+      <!-- Botão para cancelar toda a venda -->
+      <form method="POST" action="cancelar_venda.php">
+        <input type="submit" name="cancelar_venda" value="Cancelar Venda" />
+      </form>
+
+      <form method="POST" action="venda.php">
+        <!-- Desabilita o botão se não houver produtos -->
+        <input type="submit" name="venda" value="Finalizar Venda" <?php echo $temProdutos ? '' : 'disabled'; ?> />
+      </form>
+
+      <form method="POST" action="crediario.php">
+        <!-- Desabilita o botão se não houver produtos -->
+        <input type="submit" name="crediario" value="Venda no Crediário" <?php echo $temProdutos ? '' : 'disabled'; ?> />
+      </form>
+
+      <!-- Botão para abrir o modal -->
+      <form action="">
+        <button id="openModalBtn" class="inpt" type="button">Exibir Produtos </button>
+      </form>
+    </div>
+
   </div>
 
-  <div class="camada">
-    <form method="POST" style="display: flex;">
-      <div class="codigo_interno">
+
+  <!-- TOP î FINALIZADO! -->
+
+
+
+  <!-- <div class="camada"> -->
+
+  <form method="POST" class="form-all">
+
+    <div class="alinha-codigo">
+
+      <div class="alinha-form">
         <h2 class="txtcdg">Código</h2>
-        <input type="text" autofocus class="cdg" name="codigo_interno"
+        <input type="text" placeholder="Digite o Código do produto aqui" autofocus class="cdg div-inpt" name="codigo_interno"
           value="<?php echo isset($_POST['codigo_interno']) ? htmlspecialchars($_POST['codigo_interno']) : ''; ?>"
           required />
       </div>
 
-      <div class="produto">
+      <div class="alinha-form">
         <h2 class="txtprd">Produto</h2>
-        <div class="prd">
+        <div class="prd div-inpt">
           <?php echo htmlspecialchars($descricao); ?>
           <?php echo isset($unidade_medida) ? " ({$unidade_medida})" : ''; ?>
         </div>
 
       </div>
+    </div>
+    <!-- Tabela V -->
 
-      <div class="div">
+    <!-- Tabela de produtos -->
+    <div class="alinha-tbl">
+      <div class="tbl">
+        <table class="table">
+          <tr class="head">
+            <th>Num prod</th>
+            <th>Cod de Barras</th>
+            <th>Descrição</th>
+            <th>Qtde</th>
+            <th>UM</th>
+            <th class="fim">Valor</th>
+            <th>Ações</th>
+          </tr>
+          <?php
+          // Exibe os produtos da sessão
+          foreach ($_SESSION['produtos'] as $index => $produto) {
+            echo "<tr>
+              <td>{$produto['codigo']}</td>
+              <td>{$produto['codigo_barras']}</td>
+              <td>{$produto['descricao']}</td>
+              <td>{$produto['quantidade']}</td>
+              <td>{$produto['unidade_medida']}</td>
+              <td>R$ {$produto['subtotal']}</td>
+              <td>
+                <form method='POST' action='cancelar_item.php' style='display:inline;'>
+                  <input type='hidden' name='codigo_excluir' value='{$produto['codigo']}' />
+                  <input type='submit' value='X' />
+                </form>
+              </td>
+            </tr>";
+          }
+          ?>
+        </table>
+      </div>
+
+
+
+
+
+
+
+
+
+      <!-- Btn juntos | -->
+
+      <div class="alinha-inputs-tbl">
         <div class="preco">
           <h2 class="txtprc">Preço</h2>
-          <div class="prc input">
+          <div class="prc input div-inpt">
             <?php echo !empty($valor) ? 'R$ ' . number_format($valor, 2, ',', '.') : ''; ?>
           </div>
         </div>
 
         <div class="quantidade">
           <h2 class="txtqtd">Quantidade</h2>
-          <div class="qtd input">
-            <input type="number" class="cdg2" name="quantidade" value="<?php echo $quantidade; ?>" required
-              step="0.01" />
-          </div>
+
+          <input type="number" placeholder="Digite a quantidade aqui" class="qtd input div-inpt" name="quantidade" value="<?php echo $quantidade; ?>" required
+            step="0.01" />
+
         </div>
 
         <div class="btn_prod">
@@ -278,15 +346,16 @@ $temProdutos = !empty($_SESSION['produtos']);
 
         <div class="subtotal">
           <h2 class="txtttl">Subtotal</h2>
-          <div class="sbt input">
+          <div class="sbt input div-inpt">
             <?php echo !empty($subtotal) ? 'R$ ' . htmlspecialchars($subtotal) : ''; ?>
           </div>
         </div>
 
         <input type="submit" name="adicionar_produto" value="Adicionar Produto" />
       </div>
-    </form>
-  </div>
+    </div>
+  </form>
+  <!-- </div> -->
 
   <!-- Modal -->
   <div id="productModal" class="modal">
@@ -294,7 +363,7 @@ $temProdutos = !empty($_SESSION['produtos']);
       <span class="close">&times;</span>
       <h2>Produtos Cadastrados</h2>
       <table>
-        <tr>
+        <tr class="head">
           <th>Código</th>
           <th>Descrição</th>
           <th>Preço</th>
@@ -310,41 +379,8 @@ $temProdutos = !empty($_SESSION['produtos']);
     </div>
   </div>
 
-  <!-- Tabela de produtos -->
-  <div class="tbl">
-    <table>
-      <tr>
-        <th>Num prod</th>
-        <th>Cod de Barras</th>
-        <th>Descrição</th>
-        <th>Qtde</th>
-        <th>UM</th>
-        <th class="fim">Valor</th>
-        <th>Ações</th>
-      </tr>
-      <?php
-      // Exibe os produtos da sessão
-      foreach ($_SESSION['produtos'] as $index => $produto) {
-        echo "<tr>
-              <td>{$produto['codigo']}</td>
-              <td>{$produto['codigo_barras']}</td>
-              <td>{$produto['descricao']}</td>
-              <td>{$produto['quantidade']}</td>
-              <td>{$produto['unidade_medida']}</td>
-              <td>R$ {$produto['subtotal']}</td>
-              <td>
-                <form method='POST' action='cancelar_item.php' style='display:inline;'>
-                  <input type='hidden' name='codigo_excluir' value='{$produto['codigo']}' />
-                  <input type='submit' value='Cancelar Item' />
-                </form>
-              </td>
-            </tr>";
-      }
-      ?>
-    </table>
-  </div>
 
-  <div id="data"></div>
+
 
   <script>
     // Obter o modal
@@ -357,17 +393,17 @@ $temProdutos = !empty($_SESSION['produtos']);
     var span = document.getElementsByClassName("close")[0];
 
     // Quando o usuário clicar no botão, abre o modal
-    btn.onclick = function () {
+    btn.onclick = function() {
       modal.style.display = "block";
     }
 
     // Quando o usuário clicar no <span> (x), fecha o modal
-    span.onclick = function () {
+    span.onclick = function() {
       modal.style.display = "none";
     }
 
     // Quando o usuário clicar fora do modal, ele também fecha
-    window.onclick = function (event) {
+    window.onclick = function(event) {
       if (event.target == modal) {
         modal.style.display = "none";
       }

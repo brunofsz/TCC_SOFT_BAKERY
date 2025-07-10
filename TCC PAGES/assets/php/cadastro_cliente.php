@@ -10,35 +10,43 @@
 
 <body>
     <h1>Cadastro de Cliente Físico/Jurídico</h1>
-    <form action="cadastrar_cliente.php" method="POST"> <!-- Ação que aponta para o script PHP -->
-        <h3>Nome Pessoal/Razão Social:</h3>
-        <input type="text" class="input" name="nome" required> <!-- Nome do campo no banco -->
+    <form class="alinha-formulario" action="cadastrar_cliente.php" method="POST"> <!-- Ação que aponta para o script PHP -->
+        <div class="dados">
+            <h3>Nome Pessoal/Razão Social:</h3>
+            <input type="text" class="input" name="nome" required> <!-- Nome do campo no banco -->
+        </div>
+        <div class="dados">
+            <h3>Nome Fantasia:</h3>
+            <input type="text" class="input" name="nome_fantasia" required>
+        </div>
+        <div class="dados">
+            <h3>E-mail:</h3>
+            <input type="email" class="input" name="email" required>
+        </div>
 
-        <h3>Nome Fantasia:</h3>
-        <input type="text" class="input" name="nome_fantasia" required>
+        <div class="dados menor">
 
-        <h3>E-mail:</h3>
-        <input type="email" class="input" name="email" required>
+            <div class="dados cp">
+                <h3>Telefone:</h3>
+                <input class="peq input" type="text" name="telefone" required>
+            </div>
 
-        <h3>Telefone:</h3>
-        <input class="peq input" type="text" name="telefone" required>
-
-        <div class="inputs">
-            <div class="cpf">
-                <h3>CPF</h3>
+            <div class="dados cp">
+                <h3>CPF:</h3>
                 <input class="peq input" type="text" name="cpf">
             </div>
 
-            <div class="cnpj">
-                <h3>CNPJ</h3>
+            <div class="dados cp">
+                <h3>CNPJ:</h3>
                 <input class="peq input" type="text" name="cnpj">
             </div>
         </div>
 
-        <div class="botoes">
+        <div class="btns">
             <div class="dentro">
+                <button type="reset" onclick="window.location.href='./clientes.php'; return false;" class="btn cancelar">Cancelar</button>
                 <button type="submit" class="btn">Finalizar</button>
-                <button type="reset" onclick="window.location.href='./clientes.php'; return false;" class="btn">Cancelar</button>
+
             </div>
         </div>
     </form>

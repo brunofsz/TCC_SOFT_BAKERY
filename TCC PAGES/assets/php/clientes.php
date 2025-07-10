@@ -21,7 +21,7 @@
 
   <div class="tbl">
     <table>
-      <tr>
+      <tr class="head">
         <th>Código do Cliente</th>
         <th>Nome</th>
         <th>Nome Fantasia</th>
@@ -60,7 +60,7 @@
 
           // Recuperar o cod_vend diretamente da tabela cad_clientes
           $cod_vend = $row['cod_vend']; // Aqui você já tem o cod_vend diretamente
-      
+
           // Exibir os dados na tabela
           echo "<tr>";
           echo "<td>" . $row['cod_cliente'] . "</td>";
@@ -72,7 +72,7 @@
           echo "<td>" . $row['telefone'] . "</td>";
           echo "<td class='fim'>" . $row['st_devedor'] . "</td>"; // Mostra se é inadimplente
           // echo "<td class='fim'>" . $cod_vend . "</td>"; // Exibe o cod_vend
-      
+
           // Adiciona o botão de pagamento apenas se o cliente for inadimplente
           // Adiciona o botão de pagamento, passando o cod_vend para a URL
           if ($row['st_devedor'] == "sim") {

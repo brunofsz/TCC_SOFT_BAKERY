@@ -31,23 +31,19 @@ if ($conn->connect_error) {
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <!-- Botão de cadastro que envolve o ícone e o título -->
-            <button class="btn-cadastro">
-                <div class="header-icon">+</div> <!-- Ícone de "+" -->
-                <a href="fornecedores_cadastro.php"><h1>Cadastro</h1></a> <!-- Título "Cadastro" -->
-            </button>
 
-            <!-- Novo botão ao lado, com o mesmo estilo, para redirecionar para home.php -->
-            <button class="btn-home" onclick="window.location.href='home.php'">
-                <h1>Home</h1> <!-- Título "Home" -->
-            </button>
-        </header>
 
-        <!-- Tabela de dados -->
+    <header class="icones">
+
+        <a href="home.php" class="voltar"> <img src="../img/voltar.png" alt="Cadastrar" class="cadastro"> </a>
+        <a href="fornecedores_cadastro.php" class="cadastro"> <img src="../img/cadastro.png" alt="Cadastrar" class="cadastro"> </a> <!-- Título "Cadastro" -->
+    </header>
+    <div class="listra"></div>
+
+    <!-- Tabela de dados -->
+    <div class="tbl">
         <table>
-            <thead>
+            <thead class="head">
                 <tr>
                     <!-- Cabeçalhos da tabela -->
                     <th>Código do Fornecedor</th>
@@ -88,6 +84,7 @@ if ($conn->connect_error) {
             </tbody>
         </table>
     </div>
+
 </body>
 
 </html>

@@ -96,15 +96,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <body>
   <h1>Pagamento De Crediário</h1>
-  <br>
+
   <h1>Referente ao pagamento do título abaixo listado:</h1>
-  <br>
+
 
   <!-- Exibe o nome do cliente -->
   <div class="titulo">
     <h2>Nome do Cliente: <?php echo htmlspecialchars($cliente['nome']); ?></h2>
   </div>
-  <br>
+
 
   <!-- Tabela das vendas -->
   <div class="tbl">

@@ -71,15 +71,17 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOFT BAKERY - Cadastro de Código de Barras</title>
-    <link rel="stylesheet" href="../css/cadProduto.css">
+    <link rel="stylesheet" href="../css/cad_codigo_barras.css">
 </head>
 
 <body>
-    <form action="cad_codigo_barras.php" method="POST">
-        <div class="titulo">
-            <h1>Cadastro De Código De Barras</h1>
-            <h2>Associe um código de barras a um produto existente</h2>
-        </div>
+    <div class="titulo">
+        <h1>Cadastro De Código De Barras</h1>
+    </div>
+    <form class="alinha-formulario" action="cad_codigo_barras.php" method="POST">
+
+        <h2>Associe um código de barras a um produto existente</h2>
+
 
         <div class="dados">
             <!-- Seleção de Produto -->
@@ -101,8 +103,8 @@ $conn->close();
 
         <div class="btns">
             <!-- Botão Cancelar redireciona para produto.php -->
-            <input type="button" value="Cancelar" class="input btn" onclick="window.location.href='produto.php';">
-            <input type="submit" value="Cadastrar Código de Barras" class="input btn">
+            <input type="button" value="Cancelar" class="input cancelar btn" onclick="window.location.href='produto.php';">
+            <input type="submit" value="Cadastrar Código" class="input btn">
         </div>
     </form>
 </body>
