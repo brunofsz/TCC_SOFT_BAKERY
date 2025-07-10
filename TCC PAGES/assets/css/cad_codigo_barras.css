@@ -1,65 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
-    /* corpo todo */
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(214, 228, 255);
-    align-items: baseline;
-    margin: 0;
+  /* corpo todo */
+  height: 100dvh;
+  width: 100dvw;
+  display: flex;
+  flex-direction: column;
+  background-color: #d6e4ff;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
 }
 
 h1,
 h2,
 label {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    margin-left: 1vw;
+  margin: 0;
 }
 
-h2 {
-    margin-left: 1vw;
+.titulo h2 {
+  margin-left: 1vw;
+}
+
+.alinha-formulario {
+  border-radius: 0.6rem;
+  width: 90dvw;
+  background-color: #00004d;
+  height: 70dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
 }
 
 .titulo {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .input {
-    height: 4vh;
+  height: 6dvh;
+  padding: 0 1dvw;
+  border-radius: 0.6rem;
+  border: 0.5px black solid;
 }
 
 .des {
-    margin-left: 1vw;
-    width: 65vw;
+  margin-left: 1vw;
+  width: 65vw;
 }
 
 .cdb {
-    margin-left: 3vw;
-    width: 27vw;
+  margin-left: 3vw;
+  width: 27vw;
 }
 
 .dados {
-    margin: 1vh 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1vh 0;
+  width: 80dvw;
 }
 
 .btns {
-    margin-left: 70vw;
+  width: 80dvw;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .btn {
-    background-color: rgb(0, 0, 77);
-    color: aliceblue;
-    width: 10vw;
-    margin-left: 3vw;
-    cursor: pointer;
+  width: 10dvw;
+  height: 5vh;
+  background-color: #3b19ff;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 0;
+  color: black;
+  font-weight: bold;
 }
 
 .btn:hover {
-    background-color: rgb(0, 0, 40);
+  background-color: #7057ff;
 }
 
-.radio {
-    cursor: pointer;
+.cancelar {
+  background: #ff1919;
+  margin-right: 3dvw;
+}
+
+.cancelar:hover {
+  background-color: #ff5757;
 }

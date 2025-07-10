@@ -1,57 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=Russo+One&family=Silkscreen:wght@400;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 body {
-    /* corpo todo */
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(214, 228, 255);
+  /* corpo todo */
+  height: 100dvh;
+  width: 100dvw;
+  display: flex;
+  flex-direction: column;
+  background-color: #d6e4ff;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
 }
 
-h1 {
-    margin-left: 3vw;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-h3 {
-    margin-top: 4vh;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 3vw;
-
+.alinha-formulario {
+  border-radius: 0.6rem;
+  width: 90dvw;
+  background-color: #00004d;
+  height: 70dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
 }
 
 .input {
-    width: 70vw;
-    margin-left: 3vw;
-    font-size: 3vh;
-    height: 4vh;
-    font-family: Arial, Helvetica, sans-serif;
+  height: 6dvh;
+  padding: 0 1dvw;
+  border-radius: 0.6rem;
+  border: 0.5px black solid;
+  width: 50dvw;
+}
+
+.dados {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1vh 0;
+  width: 80dvw;
+}
+
+.btns {
+  width: 80dvw;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .btn {
-    width: 15vw;
-    height: 4vh;
-    background-color: rgb(0, 0, 77);
-    color: aliceblue;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 3vh;
-    cursor: pointer;
-}
-
-.dentro {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-left: 0;
-    width: 35vw;
-}
-
-.botoes {
-    margin-top: 10vh;
-    display: flex;
-    justify-content: end;
+  width: 10dvw;
+  height: 5vh;
+  background-color: #3b19ff;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 0;
+  color: black;
+  font-weight: bold;
 }
 
 .btn:hover {
-    background-color: rgb(0, 0, 53);
+  background-color: #7057ff;
+}
 
+.cancelar {
+  background: #ff1919;
+  margin-right: 3dvw;
+}
+
+.cancelar:hover {
+  background-color: #ff5757;
+}
+.num {
+  width: 25dvw;
+}
+
+.peq {
+  width: 16dvw;
+}
+.dados-num {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  gap: 5dvw;
+  width: 80dvw; 
 }

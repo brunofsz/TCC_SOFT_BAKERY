@@ -1,128 +1,73 @@
-/* Resetando as margens, preenchimentos e definindo a caixa de modelo de todos os elementos */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+  /* corpo todo */
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(214, 228, 255);
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+.listra {
+  background-color: blue;
+  width: 100dvw;
+  height: 2dvh;
 }
 
-/* Estilizando o corpo e a estrutura da página */
-body, html {
-    font-family: Arial, sans-serif; /* Definindo a fonte */
-    background-color: #A0A7F5; /* Cor de fundo da página */
-    height: 100vh; /* Altura total da tela */
-    display: flex; /* Usando flexbox para o layout */
-    flex-direction: column; /* Organizando os itens na vertical */
+.icones {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  width: 100dvw;
+  height: 17dvh;
 }
 
-a {
-    text-decoration: none;  /* Remove o sublinhado */
-    color: inherit;         /* Herda a cor do elemento pai */
+img {
+  width: 60px;
+  height: 60px;
 }
 
-/* Estilo do container principal */
-.container {
-    flex: 1;
-    width: 100%; /* Ocupa toda a largura */
-    margin: 0 auto; /* Centraliza o conteúdo */
-    background-color: #F4F4F4; /* Cor de fundo da área principal */
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para um efeito 3D suave */
+.voltar {
+  margin-left: 1dvw;
+  cursor: pointer;
+}
+.cadastro {
+  cursor: pointer;
+  margin-right: 1dvw;
+}
+/* jjdjdj */
+
+.head {
+  position: sticky;
+  top: 0;
+  background-color: #7057ff;
 }
 
-/* Estilo do cabeçalho */
-header {
-    display: flex;
-    align-items: center; /* Centralizando o conteúdo no eixo vertical */
-    background-color: #fff; /* Cor de fundo branca para o cabeçalho */
-    padding: 15px;
-    border-bottom: 3px solid #fff; /* Linha de separação no fundo */
-    color: #071484; /* Cor do texto no cabeçalho */
-    margin-bottom: 20px; /* Adiciona espaço entre o cabeçalho (botões) e a tabela */
-}
-
-/* Estilizando o botão que engloba o ícone e o texto */
-button {
-    background-color: #A0A7F5; /* Cor de fundo do botão */
-    color: white; /* Cor do texto dentro do botão */
-    border: none; /* Sem borda no botão */
-    padding: 10px 20px; /* Espaçamento interno */
-    font-size: 1.2em; /* Tamanho da fonte */
-    cursor: pointer; /* O cursor muda para pointer ao passar o mouse */
-    display: flex; /* Flexbox para centralizar o conteúdo do botão */
-    align-items: center; /* Centralizando o conteúdo verticalmente */
-    justify-content: center; /* Centralizando o conteúdo horizontalmente */
-    border-radius: 5px; /* Bordas arredondadas */
-    text-align: center; /* Alinhando o texto ao centro */
-    margin-right: 20px; /* Aumenta o espaço entre os botões */
-}
-
-/* Efeito ao passar o mouse sobre o botão */
-button:hover {
-    background-color: #A0A7C5; /* Mudança de cor ao passar o mouse */
-}
-
-/* Estilizando o ícone dentro do botão (o "+") */
-.header-icon {
-    width: 24px;
-    height: 24px;
-    background-color: #071484; /* Cor de fundo do círculo */
-    border-radius: 50%; /* Tornando o ícone redondo */
-    display: flex; /* Usando flexbox para centralizar o ícone */
-    align-items: center; /* Alinhando verticalmente */
-    justify-content: center; /* Alinhando horizontalmente */
-    color: #ffffff; /* Cor do ícone */
-    font-weight: bold; /* Negrito no ícone */
-    font-size: 16px; /* Tamanho da fonte do ícone */
-    margin-right: 10px; /* Espaço à direita do ícone */
-}
-
-/* Estilizando o título "Cadastro" */
-h1 {
-    font-size: 1.2em; /* Tamanho da fonte */
-    color: #071484; /* Cor do texto */
-    font-weight: normal; /* Peso normal para o título */
-}
-
-/* Estilo da tabela */
-table {
-    width: 100%; /* Ocupa toda a largura */
-    border-collapse: collapse; /* Elimina os espaços entre as células */
-    margin-top: 0;
-    background-color: #ffffff; /* Cor de fundo da tabela */
-    flex: 1;
-}
-
-/* Estilo do cabeçalho da tabela */
-thead {
-    background-color: #071484; /* Cor de fundo azul escuro */
-    color: white; /* Cor do texto em branco */
-}
-
-/* Estilo das células da tabela */
-th, td {
-    padding: 12px; /* Espaçamento interno */
-    text-align: left; /* Alinhamento do texto à esquerda */
-    border: 1px solid #bbb; /* Bordas finas e cinzas */
-    font-size: 0.9em; /* Tamanho de fonte menor */
-}
-
-/* Negrito nos cabeçalhos das células */
 th {
-    font-weight: bold;
+  color: #000;
+  text-align: center;
+  border: solid 2px rgb(0, 0, 0);
+  height: 4dvh;
+}
+td {
+  border: solid 2px rgb(0, 0, 0);
+  text-align: center;
+
+  height: 3rem;
 }
 
-/* Definindo a altura das linhas do corpo da tabela */
-tbody tr {
-    height: 40px;
+table {
+  width: 89dvw;
+  border-collapse: collapse;
+  background-color: #d2d2d2;
 }
 
-/* Efeito de hover nas linhas da tabela */
-tbody tr:hover {
-    background-color: #eaeaea; /* Cor de fundo ao passar o mouse */
-}
-
-/* Adicionando margem à esquerda do botão "Home" */
-button.btn-home {
-    margin-left: 20px; /* Aumenta o espaço entre os botões */
+.tbl {
+  width: 90dvw;
+  background-color: transparent;
+  max-height: 75dvh;
+  margin-top: 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }

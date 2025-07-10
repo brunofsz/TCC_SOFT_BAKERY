@@ -1,131 +1,99 @@
-@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=Russo+One&family=Silkscreen:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=Russo+One&family=Silkscreen:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 body {
-    /* corpo todo */
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(214, 228, 255);
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    overflow: hidden;
-}
-
-
-.tbl {
-    width: 60vw;
-    background-color: rgb(210, 210, 210);
-    border: solid 2px rgb(255, 255, 255);
-    height: 70vh;
-    text-align: center;
-    overflow: hidden;
-    overflow-y: scroll;
-    color: white;
-}
-
-th {
-    font-family: Arial, Helvetica, sans-serif;
-    border: solid 2px black;
-    text-align: center;
-    width: 90vw;
-    color: rgb(0, 0, 0);
-    border-radius: 5px;
-
+  /* corpo todo */
+  height: 100dvh;
+  width: 100dvw;
+  display: flex;
+  flex-direction: column;
+  background-color: #d6e4ff;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0;
+  overflow: hidden;
 }
 
 img {
-
-    width: 60px;
-    height: 60px;
+  width: 60px;
+  height: 60px;
 }
-
 
 .voltar {
-    position: absolute;
-    left: 1vw;
-    top: 2vh;
-    cursor: pointer;
-
+  position: absolute;
+  left: 1vw;
+  top: 2vh;
+  cursor: pointer;
 }
 
-.cadastro {
-    cursor: pointer;
-    position: absolute;
-    right: 1vw;
-    margin-top: 2vh;
-
+.tbl {
+  width: 70dvw;
 }
 
-.bloco {
-    margin-top: 5vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 80vw;
-    height: 60vh;
-    background-color: rgb(210, 210, 210);
-    border-radius: 15px;
-    overflow-y: auto;
+thead {
+  background-color: #7057ff;
+  position: sticky;
+  top: 0;
 }
 
 .tbl1 {
-
-    width: 70vw;
-    text-align: center;
-    overflow: hidden;
-}
-
-td {
-    text-align: center;
-    border: solid 2px rgb(0, 0, 0);
-    color: rgb(0, 0, 0);
-    border-radius: 5px;
-}
-
-.td1 {
-    color: black;
-    text-align: center;
-    border: solid 2px rgb(0, 0, 0);
-    border-radius: 5px
-}
-
-.h1 {
-    margin-bottom: 3vh;
-    margin-top: 3vh;
-
-}
-
-.one {
-    overflow-x: hidden;
-    overflow-y: auto;
-    height: 10vh;
-    width: 70vw;
-    background-color: rgb(210, 210, 210);
-    border-radius: 15px;
-}
-
-input[type="submit"] {
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: azure;
+  text-align: center;
+  width: 70dvw;
+  border-collapse: collapse;
 }
 
 span {
-    color: crimson;
-    font-family: Arial, Helvetica, sans-serif;
+  color: crimson;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-h1 {
-    font-family: Arial, Helvetica, sans-serif;
+/* BLZ */
+
+table {
+  background-color: #d9d9d9;
+  border-collapse: collapse;
+}
+th {
+  color: #000;
+  text-align: center;
+  height: 2rem;
+  border: solid 2px rgb(0, 0, 0);
+}
+td {
+  border: solid 2px rgb(0, 0, 0);
+  text-align: center;
+  height: 3rem;
+}
+td input[type="submit"] {
+  width: 10rem;
+  height: 2rem;
+  background-color: #7057ff;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+td input[type="submit"]:hover {
+  background-color: #4828ff;
 }
 
-h2 {
-    font-family: Arial, Helvetica, sans-serif;
+.tble {
+  width: 71dvw;
+  background-color: transparent;
+  max-height: 55dvh;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
-h3 {
-    font-family: Arial, Helvetica, sans-serif;
+.tble2 {
+  width: 71dvw;
+  background-color: transparent;
+  max-height: 20dvh;
+  overflow-x: hidden;
+  overflow-y: auto;
 }

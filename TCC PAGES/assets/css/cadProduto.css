@@ -1,100 +1,133 @@
-@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=Russo+One&family=Silkscreen:wght@400;700&display=swap');
- 
- 
-body{ /* corpo todo */
-    display: flex;
-    flex-direction: column;
-    background-color:rgb(214, 228, 255);
-    align-items: baseline;
- 
-    margin: 0;
-    }
-    h1{
-        font-family: Arial, Helvetica, sans-serif;
-        margin: 0;
- 
-        margin-left: 1vw;
-    }
-label{
- 
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-margin-top: 0.5vh;
-    margin-left: 1vw;
- 
+@import url("https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=Russo+One&family=Silkscreen:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
-    h2{
-        font-family: Arial, Helvetica, sans-serif;
-        margin: 0;
- 
-    margin-left: 1vw;
- 
-    }
-    .titulo{
-        display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 30vh;
-    }
-    .input{
-height: 4vh;
- 
- 
-    }
-    .des{
-        margin-left: 1vw;
-        width: 65vw;
-    }
-    .cdb{
-        margin-left: 3vw;
-        width: 27vw;
-    }
- 
-    .mdd{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        height: 20vh;
-margin-top: 7vh;
- 
-    }
-    .kg{
-        margin-left: 0.7vw;
-    }
-.valor{
-margin-top: 7vh;
-margin-left: 1vw;
- 
-    }
-    .vlr{
-        width: 27vw;
-    }
-    .maxmin{
-        display: flex;
-        flex-direction: row;
-        margin-top: 7vh;
-margin-left: 1vw;
-    }
-    .max{
-margin-left: 3vw;
- 
-    }
-    .min{
-        width: 27vw;
-    }
-    .btns{
-        margin-left: 70vw;
-    }
-    .btn{
-        background-color: rgb(0, 0, 77);
-        color: aliceblue;
-        width: 10vw;
-        margin-left: 3vw;
-        cursor: pointer;
-    }
-    .btn:hover{
-        background-color: rgb(0, 0, 40);
-    }
-    .radio{
-        cursor: pointer;
-    }
+body {
+  /* corpo todo */
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(214, 228, 255);
+  align-items: baseline;
+
+  margin: 0;
+}
+h1 {
+  margin-top: 5dvh;
+  margin-left: 1dvw;
+}
+label {
+  margin-left: 1dvw;
+}
+
+h2 {
+  margin-left: 1dvw;
+}
+
+.input {
+  height: 6dvh;
+  padding: 0 1dvw;
+  border-radius: 0.6rem;
+  border: 0.5px black solid;
+}
+.dados {
+  display: flex;
+  justify-content: space-between;
+  width: 95dvw;
+  margin: 5dvh 0 0 1dvw;
+}
+.des {
+  width: 63dvw;
+}
+.cdb {
+  width: 25dvw;
+}
+
+.mdd {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 20vh;
+  margin-top: 7vh;
+}
+.kg {
+  margin-left: 0.7vw;
+}
+.valor {
+  margin-top: 7vh;
+  margin-left: 1vw;
+}
+.vlr {
+  width: 27vw;
+}
+.maxmin {
+  display: flex;
+  flex-direction: row;
+  margin-top: 7vh;
+  margin-left: 1vw;
+}
+.max {
+  margin-left: 3vw;
+}
+.min {
+  width: 27vw;
+}
+.btns {
+  margin-left: 70vw;
+}
+.btn {
+  width: 10dvw;
+  height: 5vh;
+  background-color: #3b19ff;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 0;
+  color: black;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #7057ff;
+}
+
+.cancelar {
+  background: #ff1919;
+}
+
+.cancelar:hover {
+  background-color: #ff5757;
+}
+.radio {
+  width: 4dvh;
+  height: 4dvh;
+}
+
+.slct {
+  display: flex;
+  align-items: center; /* Alinha o radio verticalmente com o texto */
+  gap: 10px; /* Espaço entre o radio e o texto */
+  margin-bottom: 10px; /* Espaço entre as opções */
+}
+
+/* Teste */
+
+.logo {
+  position: absolute;
+  bottom: 5vh;
+  left: 1vw;
+  text-align: end;
+}
+
+.logo h1 {
+  font-family: "Russo One", sans-serif;
+  font-size: 11vh;
+  color: rgb(109, 106, 162);
+}
+
+#soft {
+  position: absolute;
+  bottom: 10vh;
+  left: 8vw;
+}
