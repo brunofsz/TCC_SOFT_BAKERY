@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=Russo+One&family=Silkscreen:wght@400;700&display=swap');
+ 
+body{
+    background-color:rgb(214, 228, 255);
+    margin: 0 auto;
+    }
+ 
+    .listra{
+background-color: blue;
+width: 100vw;
+height: 2vh;
+ }
+ 
+.icones{
+    display: flex;
+flex-direction: row;
+background-color: rgb(255, 255, 255);
+width: 100vw;
+height: 20vh;
+}
+img{
+margin-top: 1vh;
+width: 5vw;
+height: 10vh;
+}
+.icn{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+    margin-left: 4vw;
+        height: 15vh;
+        width: 4vw;
+      cursor: pointer;
+        font-family: Arial, Helvetica, sans-serif;
+}
+ 
+.logo{
+ 
+    position: absolute;
+    bottom: 5vh;
+    left: 1vw;
+    text-align: end;
+    }
+    h1{
+        font-family: "Russo One", sans-serif;
+    font-size: 11vh;
+    color: rgb(109, 106, 162);
+    }
+    #soft{
+   
+        position: absolute;
+        bottom: 10vh;
+        left: 8vw;
+    }
+
+
+    /* ATUALIZAÇÕES */
+
+.notaf h4{
+    margin-top: 4.2vh;
+   
+}
+
+

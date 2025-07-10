@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  /* corpo todo */
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(214, 228, 255);
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.icones {
+  display: flex;
+  flex-direction: row;
+  width: 100dvw;
+  height: 17dvh;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+}
+.home-cad {
+  display: flex;
+  width: 15dvw;
+  justify-content: space-around;
+}
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.listra {
+  background-color: blue;
+  width: 100vw;
+  height: 2vh;
+}
+
+.voltar {
+  cursor: pointer;
+}
+
+.cadastro {
+  cursor: pointer;
+  margin-right: 2vw;
+}
+
+img {
+  width: 80px;
+  height: 80px;
+}
+
+.codigo_barras {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+/* top */
+
+.tbl {
+  margin-top: 5.5dvh;
+  width: 91vw;
+  background-color: transparent;
+  text-align: center;
+  height: 70vh;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+table {
+  width: 90dvw;
+  border-collapse: collapse;
+  border-collapse: collapse;
+  background-color: #d2d2d2;
+}
+
+.head {
+  position: sticky;
+  top: 0;
+  background-color: #7057ff;
+}
+
+th {
+  color: #000;
+  text-align: center;
+  border: solid 2px rgb(0, 0, 0);
+  height: 3dvh;
+}
+td {
+  border: solid 2px rgb(0, 0, 0);
+  text-align: center;
+
+  height: 5dvh;
+}
+
+.funcao {
+  width: 30px;
+  height: 30px;
+}
